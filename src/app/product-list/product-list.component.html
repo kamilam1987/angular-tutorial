@@ -1,0 +1,16 @@
+<h2>Products</h2>
+<!-- *ngFor is a "structural directive". Structural directives shape or reshape the DOM's structure, typically by adding, removing, and manipulating the elements to which they are attached. Any directive with an asterisk, *, is a structural directive.-->
+<div *ngFor= "let product of products">
+  <!-- Display name of the product-->
+  <h3>
+    <a [title] = "product.name + 'details'">
+    {{ product.name }}
+    </a>
+  </h3>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
