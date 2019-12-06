@@ -7,6 +7,15 @@
     {{ product.name }}
     </a>
   </h3>
+  <!-- Add product description On the <p> element, use an *ngIf directive so that Angular only creates the <p> element if the current product has a description.-->
+  <p *ngIf="product.description">
+    Description: {{ product.description}}
+  </p>
+
+  <!-- Add share button. ind the button's click event to the share() method (in product-list.component.ts).-->
+
+  <button (click)="share()">
+    share</button>
 </div>
 
 <!-- 
