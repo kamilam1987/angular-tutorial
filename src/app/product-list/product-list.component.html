@@ -15,8 +15,15 @@
   <!-- Add share button. ind the button's click event to the share() method (in product-list.component.ts).-->
 
   <button (click)="share()">
-    share</button>
+    Share</button>
+
+    <app-product-alerts
+      [product]= "product"
+      (notify)="onNotify()">
+    </app-product-alerts>
 </div>
+
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
