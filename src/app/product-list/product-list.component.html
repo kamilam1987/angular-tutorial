@@ -1,9 +1,9 @@
 <h2>Products</h2>
 <!-- *ngFor is a "structural directive". Structural directives shape or reshape the DOM's structure, typically by adding, removing, and manipulating the elements to which they are attached. Any directive with an asterisk, *, is a structural directive.-->
-<div *ngFor= "let product of products">
+<div *ngFor="let product of products; index as productId">
   <!-- Display name of the product-->
   <h3>
-    <a [title] = "product.name + 'details'">
+    <a [title] = "product.name + 'details'"[routerLink]= "['/products', productId]">
     {{ product.name }}
     </a>
   </h3>
